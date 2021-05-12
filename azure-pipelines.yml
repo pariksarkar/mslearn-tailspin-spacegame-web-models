@@ -16,7 +16,9 @@ steps:
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
-
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
